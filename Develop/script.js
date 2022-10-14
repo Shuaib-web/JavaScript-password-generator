@@ -5,14 +5,16 @@ function generatePassword() {
 
 var userInput =  window.prompt ('How long do you want your password? ')
 
-var passwordLength = parseInt (userInput)
+var passwordLength = parseInt(userInput)
 
 if (isNaN(passwordLength)) {
-  window.alert ('This is not a number')
-} else {
-  window.alert ('This is a number')
+  window.alert ('That  is not a number')
+  return
 }
 
+if (passwordLength < 8 || passwordLength > 128)
+window.alert ('The length of the password must be between 8 and 128 characters')
+return 
 }
 
 
