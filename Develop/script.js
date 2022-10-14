@@ -12,13 +12,17 @@ if (isNaN(passwordLength)) {
   return
 }
 
-if (passwordLength < 8 || passwordLength > 128)
+if (passwordLength < 8 || passwordLength > 128) {
 window.alert ('The length of the password must be between 8 and 128 characters')
 return 
 }
 
+var userWantsNumbers = window.confirm ('Would you like to use numbers?')
+var userWantsUppercase = window.confirm ('Would you like to use Uppercase letters?')
+var userWantsLowercase = window.confirm ('Would you like to use lowercase letters?')
+var userWantsSymbols = window.confirm ('Would you like to use symbols?')
 
-
+}
 
 
 // Write password to the #password input
