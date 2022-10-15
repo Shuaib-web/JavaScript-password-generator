@@ -25,6 +25,8 @@ if (isNaN(passwordLength)) {
   return
 }
 
+}
+
 if (passwordLength < 8 || passwordLength > 128) {
 window.alert ('The length of the password must be between 8 and 128 characters')
 return 
@@ -59,14 +61,16 @@ if (userWantsLowercase === true ) {
   optionsCart.push (lowercaseList)
 }
 
-console.log(optionsCart)
+if (optionsCart.length === 0){
+  optionsCart.push(lowercaseList)
+}
 
-var generatePassword = ''
+var generatedPassword = ""
 
 for (var i = 0; i < passwordLength, i++;) {
   var randomList = getRandomItem(optionsCart)
   var randomCharacter = getRandomItem(randomList )
-  generatePassword += randomCharacter
+  generatedPassword += randomCharacter
 }
 console.log(generatePassword)
 }
@@ -84,4 +88,4 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-}
+
