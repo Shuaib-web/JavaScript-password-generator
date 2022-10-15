@@ -5,32 +5,34 @@ function randomInt(min, max) {
   if (!max) {
     max = min
     min = 0
-  }
-
-  let rand = Math.random()
+  var rand = Math.random()
   return Math.floor(min*(1 - rand) + rand*max)
+}
 
-  function getRandomIndex(list) {
+  function getRandomItem(list) {
     return list[randomInt(list.length)]
-  }
+}
 
 function generatePassword() {
 
-var userInput =  window.prompt ('How long do you want your password? ')
+  while (true) {
 
-var passwordLength = parseInt(userInput)
+    var userInput =  window.prompt ('How long do you want your password?') 
 
-if (isNaN(passwordLength)) {
-  window.alert ('That  is not a number')
-  return
-}
+    // user exited the prompt
+    if (userInput --- null ) {
+      return
+    }
 
-}
+    var passwordLength = parseInt(userInput)
 
-if (passwordLength < 8 || passwordLength > 128) {
-window.alert ('The length of the password must be between 8 and 128 characters')
-return 
-}
+    if (isNaN(passwordLength)) {
+      window.alert ('That is not a number')
+    } else if (passwordLength < 8 || passwordLength > 128) {
+      window.alert ('Invalid the length of the password must be between 8 and 128 characters')
+    } else {
+      break
+    }
 
 var userWantsNumbers = window.confirm ('Would you like to use numbers?')
 var userWantsSymbols = window.confirm ('Would you like to use symbols?')
@@ -72,20 +74,25 @@ for (var i = 0; i < passwordLength, i++;) {
   var randomCharacter = getRandomItem(randomList )
   generatedPassword += randomCharacter
 }
-console.log(generatePassword)
+
+
+return generatedPassword
 }
+
 
 
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword(); 
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 
+  if (password) {
+  passwordText.value = password ;
 }
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
