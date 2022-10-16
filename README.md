@@ -1,6 +1,6 @@
 # JavaScript-password-generator
 
-## Using JavaScript to generate password 
+### Using JavaScript to generate password 
 
 Clicking on the generate password button will introduce a progression of prompts.
 Prompts will clarify the users preferences for password length and  character types.
