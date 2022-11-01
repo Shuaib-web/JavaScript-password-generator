@@ -8,3 +8,5 @@ Should the users input be invalid they will be alerted regarding the reason why 
 At the point when all prompts are addressed a password is produced matching the chose standards.
 The password is then shown on the page.
 
+
+
